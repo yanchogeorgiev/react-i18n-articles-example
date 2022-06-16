@@ -1,0 +1,14 @@
+{
+    "languages": [
+        {
+            "locale": "en",
+            "name": "English"
+        }, {
+            "locale": "de",
+            "name": "German"
+        }, {
+            "locale": "bg",
+            "name": "Bulgarian"
+        }
+    ]
+}

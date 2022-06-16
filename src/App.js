@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import ArticleList from "articles/ArticleList";
+import ArticleView from "articles/ArticleView";
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import LangSwitch from "shared/LangSwitch";
 
-export default App;
+export default function App() {
+    return (
+      <div className="container pt-4">
+        <Switch>
+        <Route path={`/:locale/articles/:id`}>
+            <LangSwitch baseUrl="/" />
+            <ArticleView />
+          </Route>
+          <Route path={`/:locale`}>
+            <LangSwitch baseUrl="/" />
+            <ArticleList />
+          </Route>
+          <Redirect to={`/en`} />
+        </Switch>
+      </div>
+    );
+  }

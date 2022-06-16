@@ -1,0 +1,28 @@
+.article-listing .item {
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+.article-listing a:hover {
+    text-decoration: none !important;
+}
+.article-listing .content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 10px;
+}
+.article-view {
+    position: relative;
+}
+.article-view .date {
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+.article-view .back-btn {
+    position: absolute;
+    background: white;
+    display: inline-block;
+    right: 0;
+    margin-top: -14px;
+    padding-left: 15px;
+}
